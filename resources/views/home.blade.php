@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Dati da "config/data.php": {{ $home }}</h1>
-    <p>This is my paragraph content.</p>
+    <h1>Film:</h1>
+    @foreach ($film as $SingoloFilm)
+        <p>{{ $SingoloFilm->title }} {{ $SingoloFilm->date }}</p>
+    @endforeach
 @endsection
